@@ -34,7 +34,8 @@ class About extends Component {
       return;
     } else {
       alert(`${this.state.firstName} ${this.state.lastName} has been put into the system`);
-      this.employees.push(this.state)
+      //Code to push new employee state into JSON file
+      employees.push(this.state);
       this.setState({
         firstName: "",
         lastName: "",
