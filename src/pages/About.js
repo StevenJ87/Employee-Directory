@@ -12,7 +12,8 @@ class About extends Component {
     firstName: "",
     lastName: "",
     email: "",
-    number: ""
+    number: "",
+    listType: ""
   };
 
 
@@ -27,7 +28,6 @@ class About extends Component {
   handleFormSubmit = event => {
     const { firstName, lastName, email, number } = this.state
     event.preventDefault();
-    console.log(number)
     if (firstName.trim().length === 0 || lastName.trim().length === 0 || email.trim().length === 0 || number.trim().length === 0) {
       alert('Fill out all of the inputs please');
       this.setState({
@@ -40,9 +40,7 @@ class About extends Component {
     } else {
       //Code to push new employee state into JSON file
       let newEmployee = { firstName, lastName, email, number }
-      console.log(newEmployee)
       this.setState({ employees: [...this.state.employees, newEmployee] })
-      console.log(employees);
       this.setState({
         firstName: "",
         lastName: "",
@@ -53,7 +51,7 @@ class About extends Component {
   };
 
   renderList = () => {
-    if (0 === 0) {
+    if (this.state.listType === "email") {
       (this.state.employees.sort(function(a, b) {
         return a.email.localeCompare(b.email);
      }));
@@ -65,7 +63,7 @@ class About extends Component {
         number={employee.number}
       />
     )));
-    } else if (0 === 0) {
+    } else if (this.state.listType === "LastName") {
       (this.state.employees.sort(function(a, b) {
         return a.lastName.localeCompare(b.lastName);
      }));
@@ -136,11 +134,13 @@ class About extends Component {
               </form><br />
             </Col>
           </Row>
+          <button onClick={()=>{this.setState({listType:""})}}>Order Entered</button>
+          <button onClick={()=>{this.setState({listType:"LastName"})}}>Last Name</button>
+          <button onClick={()=>{this.setState({listType:"email"})}}>Email</button>
           <Row>
             <Col size="md-12">
               <h3>Employee List</h3>
               {this.renderList()}
-
             </Col>
           </Row>
         </Container>

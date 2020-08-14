@@ -1,14 +1,2 @@
 [
-  {
-    "firstName": "John",
-    "lastName": "Smith",
-    "email": "JSmith@example.com",
-    "number": "2125558686"
-  },
-  {
-    "firstName": "Sarah",
-    "lastName": "Jacobs",
-    "email": "sJacobs@example.com",
-    "number": "2125558796"
-  }
 ]
