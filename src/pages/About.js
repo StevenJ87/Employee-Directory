@@ -33,9 +33,10 @@ class About extends Component {
       });
       return;
     } else {
-      alert(`${this.state.firstName} ${this.state.lastName} has been put into the system`);
       //Code to push new employee state into JSON file
-      employees.push(this.state);
+      let newEmployee = [{ firstName, lastName, email, number }]
+      this.setState({ employees: [...this.state.members, newEmployee] })
+      console.log(employees);
       this.setState({
         firstName: "",
         lastName: "",
@@ -45,26 +46,26 @@ class About extends Component {
     };
   };
 
-  renderList = () => {
-    if (0===0
-      // alphabetical
-      ){
-        // Display employess by last name alphabetically
-    } else if (0===0
-      // email
-    ){
-      // Display employees by email alphabetically
-    } else {
-      return (this.state.employees.map(employee => (
-        <FriendCard
-          firstName={employee.firstName}
-          lastName={employee.lastName}
-          email={employee.email}
-          number={employee.number}
-        />
-      )));
-    }
-  }
+  // renderList = () => {
+  //   if (0 === 0
+  //     // alphabetical
+  //   ) {
+  //     // Display employess by last name alphabetically
+  //   } else if (0 === 0
+  //     // email
+  //   ) {
+  //     // Display employees by email alphabetically
+  //   } else {
+  //     return (this.state.employees.map(employee => (
+  //       <FriendCard
+  //         firstName={employee.firstName}
+  //         lastName={employee.lastName}
+  //         email={employee.email}
+  //         number={employee.number}
+  //       />
+  //     )));
+  //   }
+  // }
 
   render() {
     return (
@@ -82,28 +83,28 @@ class About extends Component {
               <h3>New Employee</h3>
               <form className="form">
                 <input
-                  value={this.state.firstName}
+                  value={this.state.employees.firstName}
                   name="firstName"
                   onChange={this.handleInputChange}
                   type="text"
                   placeholder="First Name"
                 />
                 <input
-                  value={this.state.lastName}
+                  value={this.state.employees.lastName}
                   name="lastName"
                   onChange={this.handleInputChange}
                   type="text"
                   placeholder="Last Name"
                 />
                 <input
-                  value={this.state.email}
+                  value={this.state.employees.email}
                   name="email"
                   onChange={this.handleInputChange}
                   type="text"
                   placeholder="Email"
                 />
                 <input
-                  value={this.state.number}
+                  value={this.state.employees.number}
                   name="number"
                   onChange={this.handleInputChange}
                   type="number"
@@ -112,9 +113,19 @@ class About extends Component {
                 <button onClick={this.handleFormSubmit}>Submit</button>
               </form><br />
             </Col>
+          </Row>
+          <Row>
             <Col size="md-12">
               <h3>Employee List</h3>
-              {this.renderList}
+              {/* {this.renderList()} */}
+              {this.state.employees.map(employee => (
+                <FriendCard
+                  firstName={employee.firstName}
+                  lastName={employee.lastName}
+                  email={employee.email}
+                  number={employee.number}
+                />
+              ))}
             </Col>
           </Row>
         </Container>
