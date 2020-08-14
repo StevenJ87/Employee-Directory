@@ -8,11 +8,13 @@ Try out the app today at: https://limitless-ocean-04973.herokuapp.com/
 
 ## User Story
 ```
-As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+As a user, I want to be able to view my entire employee directory at once 
+so that I have quick access to their information.
 ```
 
 ## Technologies
 This aplication uses basic HTML, CSS, and bootstrap. It also utilizes React and React Component.
 
-## Video Demo
-![Gif](demo.gif)
+## Page Examples
+![Example1](Example1.PNG)
+![Example2](Example2.PNG)
