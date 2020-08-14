@@ -53,14 +53,30 @@ class About extends Component {
   };
 
   renderList = () => {
-    if (0 === 1
-      // alphabetical
-    ) {
-      // Display employess by last name alphabetically
-    } else if (0 === 1
-      // email
-    ) {
-      // Display employees by email alphabetically
+    if (0 === 0) {
+      (this.state.employees.sort(function(a, b) {
+        return a.email.localeCompare(b.email);
+     }));
+     return (this.state.employees.map(employee => (
+      <FriendCard
+        firstName={employee.firstName}
+        lastName={employee.lastName}
+        email={employee.email}
+        number={employee.number}
+      />
+    )));
+    } else if (0 === 0) {
+      (this.state.employees.sort(function(a, b) {
+        return a.lastName.localeCompare(b.lastName);
+     }));
+     return (this.state.employees.map(employee => (
+      <FriendCard
+        firstName={employee.firstName}
+        lastName={employee.lastName}
+        email={employee.email}
+        number={employee.number}
+      />
+    )));
     } else {
       return (this.state.employees.map(employee => (
         <FriendCard
