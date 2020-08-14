@@ -11,7 +11,7 @@ function App() {
       <div>
         <Navbar />
         <Wrapper>
-          <Route exact path="/" component={About} />
+          <Route exact path="https://limitless-ocean-04973.herokuapp.com" component={About} />
         </Wrapper>
         <Footer />
       </div>
