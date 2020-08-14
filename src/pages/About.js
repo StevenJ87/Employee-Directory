@@ -45,6 +45,27 @@ class About extends Component {
     };
   };
 
+  renderList = () => {
+    if (0===0
+      // alphabetical
+      ){
+        // Display employess by last name alphabetically
+    } else if (0===0
+      // email
+    ){
+      // Display employees by email alphabetically
+    } else {
+      return (this.state.employees.map(employee => (
+        <FriendCard
+          firstName={employee.firstName}
+          lastName={employee.lastName}
+          email={employee.email}
+          number={employee.number}
+        />
+      )));
+    }
+  }
+
   render() {
     return (
       <div>
@@ -93,14 +114,7 @@ class About extends Component {
             </Col>
             <Col size="md-12">
               <h3>Employee List</h3>
-              {this.state.employees.map(employee => (
-                <FriendCard
-                  firstName={employee.firstName}
-                  lastName={employee.lastName}
-                  email={employee.email}
-                  number={employee.number}
-                />
-              ))}
+              {this.renderList}
             </Col>
           </Row>
         </Container>
