@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "SpongeBob",
+    "lastName": "Squarepants",
+    "email": "@example.comsponge@example.com",
+    "number": "5555555555"
+  },
+  {
+    "firstName": "Mr.",
+    "lastName": "Krabs",
+    "email": "krab@example.com",
+    "number": "5555555555"
+  },
+  {
+    "firstName": "Dexter",
+    "lastName": "Dextington",
+    "email": "lab@example.com",
+    "number": "5555555555"
+  },
+  {
+    "firstName": "Courage",
+    "lastName": "The Cowardly Dog",
+    "email": "dog@example.com",
+    "number": "5555555555"
+  },
+  {
+    "firstName": "Doug",
+    "lastName": "Funnie",
+    "email": "dougy@example.com",
+    "number": "5555555555"
+  }
+]
