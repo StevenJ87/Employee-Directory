@@ -8,7 +8,11 @@ import FriendCard from "../components/FriendCard";
 
 class About extends Component {
   state = {
-    employees
+    employees, 
+    firstName: "",
+    lastName: "",
+    email: "",
+    number: ""
   };
 
 
@@ -120,7 +124,7 @@ class About extends Component {
             <Col size="md-12">
               <h3>Employee List</h3>
               {this.renderList()}
-              
+
             </Col>
           </Row>
         </Container>
