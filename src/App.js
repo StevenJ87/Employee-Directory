@@ -7,7 +7,7 @@ import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
-    <Router basename={'/docs'}>
+    <Router>
       <div>
         <Navbar />
         <Wrapper>
