@@ -7,11 +7,11 @@ import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
-    <Router basename={`/public`}>
+    <Router>
       <div>
         <Navbar />
         <Wrapper>
-         <Route path="/" component={About} />
+          <About/>
         </Wrapper>
         <Footer />
       </div>
@@ -20,3 +20,5 @@ function App() {
 }
 
 export default App;
+
+         {/* <Route path="/" component={About} /> */}
